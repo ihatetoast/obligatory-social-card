@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import ContactCard from './Components/ContactCard'
 
 const Wrapper = styled.div`
 padding: 1em;
@@ -86,16 +86,12 @@ const DUMMY_PEEPS = [
 ]
 
 const App = () => {
-  const title = "I am the title";
-  const message = "I am the fancy message";
-  const handleClick =()=>{
-    alert("Boop")
-  }
+ 
   return (
     <Wrapper>
-      <h1>{title}</h1>
-      <p>{message}</p>
-      <p onClick={handleClick}>I am the boop</p>
+      <ContactCard />
+      <ContactCard />
+      <ContactCard />
     </Wrapper>
   );
 };
