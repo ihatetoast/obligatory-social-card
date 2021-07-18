@@ -2,17 +2,22 @@
 socials: li, ig, tt, fb
 
 does not come with dummy data, so give all of them 4
-with some hover effect
+with some hover effectga
 
 check dribbble to style
 */
 
 import React, { useState, useEffect } from "react";
+import './App.css';
 import styled from "styled-components";
 import ContactCard from "./Components/ContactCard";
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1em;
+  width: 20em;
 `;
 
 const App = () => {
