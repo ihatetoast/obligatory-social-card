@@ -8,12 +8,12 @@ check dribbble to style
 */
 
 import React, { useState, useEffect } from "react";
-import './App.css';
+import "./App.css";
 import styled from "styled-components";
 import ContactCard from "./Components/ContactCard";
 
 const Wrapper = styled.div`
-align-items: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   margin: 0 auto;

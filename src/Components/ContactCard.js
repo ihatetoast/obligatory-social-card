@@ -12,9 +12,8 @@ const StyledName = styled.h3`
   padding: 0.5em 0;
 `;
 const ImgWrapper = styled.div`
-  background: aliceblue;
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
 `;
 const SocialList = styled.ul`
   list-style: none;
@@ -35,10 +34,6 @@ const ContactCard = (props) => {
         <StyledName>{props.name}</StyledName>
         <ImgWrapper>
           <img src={props.avatar} alt="kitten headshot" />
-          <button onClick={handleShowAge}>
-            {showAge === true ? "Hide age" : "Show age"}
-          </button>
-          {showAge === true ? <p>Age: {props.age}</p> : null}
         </ImgWrapper>
 
         <SocialList>
@@ -58,6 +53,10 @@ const ContactCard = (props) => {
             <p>{props.location.country}</p>
           </div>
         ) : null}
+        <button onClick={handleShowAge}>
+            {showAge === true ? "Hide age" : "Show age"}
+          </button>
+          {showAge === true ? <p>Age: {props.age}</p> : null}
       </ContactWrapper>
     </Card>
   );
