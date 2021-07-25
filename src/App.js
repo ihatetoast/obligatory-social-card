@@ -1,12 +1,3 @@
-/* todo 
-socials: li, ig, tt, fb
-
-does not come with dummy data, so give all of them 4
-with some hover effectga
-
-check dribbble to style
-*/
-
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import styled from "styled-components";

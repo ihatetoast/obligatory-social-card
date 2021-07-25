@@ -1,19 +1,41 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Button from '../UI/Button';
 import Card from "../UI/Card";
 
 const ContactWrapper = styled.div`
+  align-items: center;
+  border-radius: 12px 12px 0 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 `;
-const StyledName = styled.h3`
-  display: inline;
-  text-align: center;
-  padding: 0.5em 0;
+const StyledName = styled.div`
+background: #1f4f6f;
+    display: flex;
+    margin-bottom: .8em;
+    padding: .8em 0;
+    width: 100%;
+    justify-content: center;
+    h3 {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
 `;
 const ImgWrapper = styled.div`
+align-items: center;
+  border: 2px solid #709599;🇦
+  border-radius: 50%;
   display: flex;
   justify-content: center;
+  height: 140px;
+  width: 140px;
+  img {
+    border-radius: inherit;
+    height: 130px;
+    width: 130px;
+  }
 `;
 const SocialList = styled.ul`
   list-style: none;
@@ -31,7 +53,7 @@ const ContactCard = (props) => {
   return (
     <Card className="contact-card">
       <ContactWrapper>
-        <StyledName>{props.name}</StyledName>
+        <StyledName><h3>{props.name}</h3></StyledName>
         <ImgWrapper>
           <img src={props.avatar} alt="kitten headshot" />
         </ImgWrapper>
@@ -41,9 +63,9 @@ const ContactCard = (props) => {
           <li>phone: {props.phone}</li>
           <li>mobile: {props.mobile}</li>
         </SocialList>
-        <button onClick={handleShowAddress}>
+        <Button handleClick={handleShowAddress}>
           {showAddress === true ? "Hide address" : "Show address"}
-        </button>
+        </Button>
         {showAddress === true ? (
           <div>
             <p>
@@ -53,10 +75,10 @@ const ContactCard = (props) => {
             <p>{props.location.country}</p>
           </div>
         ) : null}
-        <button onClick={handleShowAge}>
-            {showAge === true ? "Hide age" : "Show age"}
-          </button>
-          {showAge === true ? <p>Age: {props.age}</p> : null}
+        <Button handleClick={handleShowAge}>
+          {showAge === true ? "Hide age" : "Show age"}
+        </Button>
+        {showAge === true ? <p>Age: {props.age}</p> : null}
       </ContactWrapper>
     </Card>
   );
