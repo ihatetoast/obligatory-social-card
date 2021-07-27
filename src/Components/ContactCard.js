@@ -63,19 +63,13 @@ const ContactCard = (props) => {
           <h3>{props.name}</h3>
         </StyledName>
         <ImgWrapper>
-          <img src={props.avatar} alt="kitten headshot" />
+          <img src={props.avatar} alt={props.name} />
         </ImgWrapper>
 
         <SocialList>
-          <IconWrapper className="icon-wrapper" content={props.email}>
-            <img src={emailIcon} alt="email icon" />
-          </IconWrapper>{" "}
-          <IconWrapper className="icon-wrapper" content={props.phone}>
-            <img src={phoneIcon} alt="phone icon" />
-          </IconWrapper>{" "}
-          <IconWrapper className="icon-wrapper" content={props.mobile}>
-            <img src={mobileIcon} alt="smart phone icon" />
-          </IconWrapper>{" "}
+          <IconWrapper className="icon-wrapper" hoverContent={props.email} imgSrc={emailIcon} />
+          <IconWrapper className="icon-wrapper" hoverContent={props.phone} imgSrc={phoneIcon} />
+          <IconWrapper className="icon-wrapper" hoverContent={props.mobile} imgSrc={mobileIcon} />
         </SocialList>
         <Button handleClick={handleShowAddress}>
           {showAddress === true ? "Hide address" : "Show address"}
