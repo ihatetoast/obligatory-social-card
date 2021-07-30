@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root{
     font-size: 16px;
 }
@@ -5,6 +7,7 @@
     margin: 0;
     padding: 0; 
     box-sizing: border-box;
+    font-family: 'Roboto','Ariel', sans-serif;
 }
 /* CARD SPECIFIC */
 .card.contact-card{
