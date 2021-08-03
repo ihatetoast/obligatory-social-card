@@ -3,7 +3,6 @@ import styled from "styled-components";
 const StyledListItem = styled.li`
   background: #fff;
   display: inline-block;
-  position: relative;
   width: 30px;
   height: 30px;
   img {
@@ -15,10 +14,14 @@ const StyledListItem = styled.li`
 const StyledDetail = styled.div`
   background-color: #fff;
   border: 1px solid #1f4f6f;
-  box-shadow: 0 1px 2px rgba(31, 79, 111, 0.25);
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px rgba(31, 79, 111, 0.5);
   display: none;
+  font-size: 0.8rem;
   padding: 5px 10px;
   position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
   white-space: nowrap;
   ${StyledListItem}:hover & {
     display: block;

@@ -13,6 +13,8 @@ const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding-bottom: 1.25em;
+  position: relative;
 `;
 const StyledName = styled.div`
   background: #1f4f6f;
@@ -41,12 +43,13 @@ const ImgWrapper = styled.div`
   }
 `;
 const SocialList = styled.ul`
-  margin: 0.5em auto;
+  margin: 1em auto;
   padding-left: 0;
-  
-  }
-
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
 `;
+
 const ContactCard = (props) => {
   const [showAge, setShowAge] = useState(false);
   const [showAddress, setShowAddress] = useState(false);
@@ -67,9 +70,21 @@ const ContactCard = (props) => {
         </ImgWrapper>
 
         <SocialList>
-          <IconWrapper className="icon-wrapper" hoverContent={props.email} imgSrc={emailIcon} />
-          <IconWrapper className="icon-wrapper" hoverContent={props.phone} imgSrc={phoneIcon} />
-          <IconWrapper className="icon-wrapper" hoverContent={props.mobile} imgSrc={mobileIcon} />
+          <IconWrapper
+            className="icon-wrapper"
+            hoverContent={props.email}
+            imgSrc={emailIcon}
+          />
+          <IconWrapper
+            className="icon-wrapper"
+            hoverContent={props.phone}
+            imgSrc={phoneIcon}
+          />
+          <IconWrapper
+            className="icon-wrapper"
+            hoverContent={props.mobile}
+            imgSrc={mobileIcon}
+          />
         </SocialList>
         <Button handleClick={handleShowAddress}>
           {showAddress === true ? "Hide address" : "Show address"}
@@ -83,9 +98,9 @@ const ContactCard = (props) => {
             <p>{props.location.country}</p>
           </div>
         ) : null}
-        <Button handleClick={handleShowAge}>
+        {/* <Button handleClick={handleShowAge}>
           {showAge === true ? "Hide age" : "Show age"}
-        </Button>
+        </Button> */}
         {showAge === true ? <p>Age: {props.age}</p> : null}
       </ContactWrapper>
     </Card>
