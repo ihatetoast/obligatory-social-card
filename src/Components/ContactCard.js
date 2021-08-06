@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
 import IconWrapper from "../UI/IconWrapper";
+import AddressBlock from './AddressBlock';
 
 const ContactWrapper = styled.div`
   align-items: center;
@@ -49,13 +50,9 @@ const SocialList = styled.ul`
   justify-content: space-between;
   width: 40%;
 `;
-
+// change the props to an obj. but not tonight. 
 const ContactCard = (props) => {
-  const [showAge, setShowAge] = useState(false);
   const [showAddress, setShowAddress] = useState(false);
-  const handleShowAge = () => {
-    setShowAge(!showAge);
-  };
   const handleShowAddress = () => {
     setShowAddress(!showAddress);
   };
@@ -89,19 +86,9 @@ const ContactCard = (props) => {
         <Button handleClick={handleShowAddress}>
           {showAddress === true ? "Hide address" : "Show address"}
         </Button>
-        {showAddress === true ? (
-          <div>
-            <p>
-              {props.location.street.number + ", " + props.location.street.name}
-            </p>
-            <p>{props.location.city + ", " + props.location.state}</p>
-            <p>{props.location.country}</p>
-          </div>
-        ) : null}
-        {/* <Button handleClick={handleShowAge}>
-          {showAge === true ? "Hide age" : "Show age"}
-        </Button> */}
-        {showAge === true ? <p>Age: {props.age}</p> : null}
+        {showAddress === true ? <AddressBlock streetNumber={props.location.street.number} streetName={props.location.street.name} city={props.location.city} state={props.location.state} country={props.location.country} />: null}
+
+   
       </ContactWrapper>
     </Card>
   );
