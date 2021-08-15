@@ -14,7 +14,7 @@ While I think about more interesting things to build, I do not want to not play 
 * Create React App 
 * Styled Components
 
-![app demo](./cards1.mov)
+![app demo](./cards.mov)
 ![app snapshot](./cards.png)
 
 ### Credit where credit is due: 
