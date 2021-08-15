@@ -16,6 +16,7 @@ const ContactWrapper = styled.div`
   overflow: hidden;
   padding-bottom: 1.25em;
   position: relative;
+  
 `;
 const StyledName = styled.div`
   background: #1f4f6f;
@@ -44,7 +45,7 @@ const ImgWrapper = styled.div`
   }
 `;
 const SocialList = styled.ul`
-  margin: 1em auto;
+  margin: 1.5em auto;
   padding-left: 0;
   display: flex;
   justify-content: space-between;
@@ -86,7 +87,13 @@ const ContactCard = (props) => {
         <Button handleClick={handleShowAddress}>
           {showAddress === true ? "Hide address" : "Show address"}
         </Button>
-        {showAddress === true ? <AddressBlock streetNumber={props.location.street.number} streetName={props.location.street.name} city={props.location.city} state={props.location.state} country={props.location.country} />: null}
+        {showAddress === true ? <AddressBlock 
+        className = "addressBlock"
+        streetNumber={props.location.street.number} 
+        streetName={props.location.street.name} 
+        city={props.location.city} 
+        state={props.location.state} 
+        country={props.location.country} />: null}
 
    
       </ContactWrapper>

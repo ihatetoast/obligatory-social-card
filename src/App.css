@@ -14,3 +14,14 @@
     margin-bottom: 1em;
     width: 100%;
 }
+.card.address-card {
+  border-radius: 5px;
+  background: #fff;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: 60%;
+  min-width: 60%;
+}
+.card.address-card p:last-child{
+  font-weight: 700;
+}

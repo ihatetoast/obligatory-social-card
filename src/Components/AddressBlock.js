@@ -1,13 +1,15 @@
 import React from "react";
-import styled from "styled-components";
+import Card from '../UI/Card'
+
+
 
 const AddressBlock = (props) => {
   return (
-    <div>
-      <p>{props.streetnumber + ", " + props.streetName}</p>
+    <Card className="address-card">
+      <p>{props.streetNumber + ", " + props.streetName}</p>
       <p>{props.city + ", " + props.state}</p>
       <p>{props.country}</p>
-    </div>
+    </Card>
   );
 };
 export default AddressBlock;

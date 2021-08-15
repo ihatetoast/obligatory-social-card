@@ -5,6 +5,7 @@ const StyledListItem = styled.li`
   display: inline-block;
   width: 30px;
   height: 30px;
+  position: relative;
   img {
     width: 100%;
   }
@@ -25,6 +26,20 @@ const StyledDetail = styled.div`
   white-space: nowrap;
   ${StyledListItem}:hover & {
     display: block;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-color: #1f4f6f;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    transform: rotate(45deg);
+    top: -7px;
+    left: 45%;
+
   }
 `;
 const IconWrapper = (props) => {
