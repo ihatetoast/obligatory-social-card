@@ -14,7 +14,11 @@ While I think about more interesting things to build, I do not want to not play 
 * Create React App 
 * Styled Components
 
-![app demo](./cards.mov)
+
+
+https://user-images.githubusercontent.com/14355452/129466284-85ceeb30-b5b9-48a4-95ee-ece368ca4113.mov
+
+
 ![app snapshot](./cards.png)
 
 ### Credit where credit is due: 
